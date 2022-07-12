@@ -8,6 +8,7 @@ import { QuestionComponent } from './Components/question/question.component';
 import { TimerComponent } from './Components/timer/timer.component';
 import { StepBarComponent } from './Components/step-bar/step-bar.component';
 import { AnswerComponent } from './Components/answer/answer.component';
+import { SummaryComponent } from './Components/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AnswerComponent } from './Components/answer/answer.component';
     QuestionComponent,
     TimerComponent,
     StepBarComponent,
-    AnswerComponent
+    AnswerComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

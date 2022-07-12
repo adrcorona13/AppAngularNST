@@ -13,7 +13,7 @@
           "index": 2,
           "text": "Answer 2",
           "isChecked": false,
-          "isCorrect": false
+          "isCorrect": true
         },
         {
           "index": 3,
@@ -37,7 +37,7 @@
           "index": 1,
           "text": "Answer 1",
           "isChecked": false,
-          "isCorrect": false
+          "isCorrect": true
         },
         {
           "index": 2,
@@ -79,7 +79,7 @@
           "index": 3,
           "text": "Answer 3",
           "isChecked": false,
-          "isCorrect": false
+          "isCorrect": true
         },
         {
           "index": 4,
@@ -115,7 +115,7 @@
           "index": 4,
           "text": "Answer 4",
           "isChecked": false,
-          "isCorrect": false
+          "isCorrect": true
         }
       ]
     }

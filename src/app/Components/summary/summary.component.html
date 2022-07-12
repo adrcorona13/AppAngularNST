@@ -1,0 +1,25 @@
+<table>
+    <tr>
+        <th>
+            Pregunta
+        </th>
+        <th>
+            Tu respuesta
+        </th>
+        <th>
+            Respuesta correcta
+        </th>
+    </tr>
+   
+    <tr *ngFor="let question of questions" [ngStyle]="{'background-color': (isCorrect(question.answers))?'Green':'Red'}">
+        <td>
+            {{question.text}} {{isCorrect(question.answers)}}
+        </td>
+        <td>
+            {{getAnswer(question.answers, true)}}
+        </td>
+        <td>
+            {{getAnswer(question.answers, false)}}
+        </td>
+    </tr>
+</table>

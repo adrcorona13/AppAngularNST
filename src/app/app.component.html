@@ -3,7 +3,7 @@
         Quiz
     </div>
     <div style="border:solid 10px  red">
-        <timer *ngIf="startTimer" [timeLeft]="5" (timerEnds)="gameOver = true"></timer>
+        <timer *ngIf="startTimer" [timeLeft]="60" (timerEnds)="gameOver = true"></timer>
     </div>
     <div style="border:solid 10px  blue">
         <question [question]="getQuestion()"></question>
@@ -22,7 +22,7 @@
     </div>
 </div>
 <div style="border:solid 10px  violet" *ngIf="gameOver">
-    puntuaciones
+    <summary [questions]="questions"></summary>
 </div>
 <div style="border:solid 10px  purple" *ngIf="newGame">
     <input type="button" value="Iniciar juego" (click)="startGame()">
