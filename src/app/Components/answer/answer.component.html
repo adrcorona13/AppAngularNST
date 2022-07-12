@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let answer of answers" (click)="selectOption(answer)">
+        {{answer.text}} - {{answer.isChecked}}
+    </li>
+</ul>

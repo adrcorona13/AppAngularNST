@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'timer',
@@ -10,6 +10,9 @@ export class TimerComponent implements OnInit, OnDestroy {
   @Input()
   timeLeft: number|any = 5;
   interval: any;
+
+  @Output()
+  timerEnds = new EventEmitter<boolean>();
 
   constructor() { }
   ngOnDestroy(): void {
@@ -24,7 +27,8 @@ export class TimerComponent implements OnInit, OnDestroy {
     this.interval = setInterval(() => {     
       if(this.timeLeft === 0) {
         clearInterval(this.interval);
-        alert("Time over!!!");
+        alert("Time Over!!");
+        this.timerEnds.emit(true);
       } else {
         this.timeLeft -= 1;
       }

@@ -14,7 +14,8 @@ export class AppComponent implements OnInit  {
   }
   
   title = 'AppAngularNST';
-  currentQuestion: number = 1;
+  currentQuestionIndex: number = 1;
+  
   newGame: boolean = true;
   gameOver: boolean = false;
   startTimer: boolean = false;
@@ -22,7 +23,7 @@ export class AppComponent implements OnInit  {
   questions: Question[] = data as Question[];
 
   getQuestion(): Question|any{
-    return this.questions.find(x=> x.index === this.currentQuestion);
+    return this.questions.find(x=> x.index === this.currentQuestionIndex);
   }
 
   getQuestionIndexes(): number[]{
@@ -31,20 +32,20 @@ export class AppComponent implements OnInit  {
 
   nextQuestion(){
     if (!this.isLastQuestion())
-      this.currentQuestion += 1;
+      this.currentQuestionIndex += 1;
   }
 
   public isLastQuestion() {
-    return this.currentQuestion == this.questions.length;
+    return this.currentQuestionIndex == this.questions.length;
   }
 
   previousQuestion(){
     if (this.isFirstQuestion())
-    this.currentQuestion -= 1;
+    this.currentQuestionIndex -= 1;
   }
 
   public isFirstQuestion(){
-    return this.currentQuestion > 1
+    return this.currentQuestionIndex > 1
   }
 
   startGame(){
@@ -65,5 +66,8 @@ export class AppComponent implements OnInit  {
     this.startTimer = false;
   }
 
+  printQuestions(){
+    console.log("preguntas", this.questions)
+  }
   
 }
