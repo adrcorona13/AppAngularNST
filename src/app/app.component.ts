@@ -1,40 +1,50 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from './Models/Question';
-import * as data from 'src/app/questions.json';
+import data from 'src/app/questions.json';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit  {
 
   ngOnInit(): void {
-    console.log(this.questions);
-    console.log(this.questions[0]);
+    this.questions
   }
   
   title = 'AppAngularNST';
-  currentQuestion: number = 0;
+  currentQuestion: number = 1;
   newGame: boolean = true;
   gameOver: boolean = false;
   startTimer: boolean = false;
 
-  questions: Question[] = (data as Question[]);
+  questions: Question[] = data as Question[];
 
-  getQuestion(): Question{
-    return this.questions[this.currentQuestion];
+  getQuestion(): Question|any{
+    return this.questions.find(x=> x.index === this.currentQuestion);
+  }
+
+  getQuestionIndexes(): number[]{
+    return this.questions.map(question => question.index);
   }
 
   nextQuestion(){
-    if (this.currentQuestion + 1 < this.questions.length)
+    if (!this.isLastQuestion())
       this.currentQuestion += 1;
   }
 
+  public isLastQuestion() {
+    return this.currentQuestion == this.questions.length;
+  }
+
   previousQuestion(){
-    console.log(this.currentQuestion)
-    if (this.currentQuestion > 0)
+    if (this.isFirstQuestion())
     this.currentQuestion -= 1;
+  }
+
+  public isFirstQuestion(){
+    return this.currentQuestion > 1
   }
 
   startGame(){
@@ -46,4 +56,6 @@ export class AppComponent implements OnInit {
     this.startTimer = false;
     this.newGame = true;
   }
+
+  
 }

@@ -9,13 +9,13 @@
         <question [question]="getQuestion()"></question>
     </div>
     <div style="border:solid 10px  black">
-        <input type="button" (click)="previousQuestion()" value="Anterior"  *ngIf="currentQuestion > 0" >
+        <input type="button" (click)="previousQuestion()" value="Anterior"  *ngIf="isFirstQuestion()" >
     </div>
     <div style="border:solid 10px  black">
-        <input type="button" (click)="nextQuestion()" value="Siguiente" *ngIf="currentQuestion + 1 < questions.length">
+        <input type="button" (click)="nextQuestion()" value="Siguiente" *ngIf="!isLastQuestion()">
     </div>
     <div style="border:solid 10px  maroon">
-        progress bar
+        <step-bar [questionIndexes]="getQuestionIndexes()" [(currentQuestion)]="currentQuestion"></step-bar>
     </div>
 </div>
 <div style="border:solid 10px  violet">

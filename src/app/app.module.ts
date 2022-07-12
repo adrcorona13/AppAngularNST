@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuestionComponent } from './Components/question/question.component';
 import { TimerComponent } from './Components/timer/timer.component';
+import { StepBarComponent } from './Components/step-bar/step-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
-    TimerComponent
+    TimerComponent,
+    StepBarComponent
   ],
   imports: [
     BrowserModule,
