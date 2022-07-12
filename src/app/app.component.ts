@@ -16,7 +16,9 @@ export class AppComponent implements OnInit {
   
   title = 'AppAngularNST';
   currentQuestion: number = 0;
-  gameStarted: boolean = false;
+  newGame: boolean = true;
+  gameOver: boolean = false;
+  startTimer: boolean = false;
 
   questions: Question[] = (data as Question[]);
 
@@ -33,5 +35,15 @@ export class AppComponent implements OnInit {
     console.log(this.currentQuestion)
     if (this.currentQuestion > 0)
     this.currentQuestion -= 1;
+  }
+
+  startGame(){
+    this.startTimer = true;
+    this.newGame = false;
+  }
+
+  finishGame(){
+    this.startTimer = false;
+    this.newGame = true;
   }
 }
