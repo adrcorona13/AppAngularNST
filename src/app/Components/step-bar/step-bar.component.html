@@ -1,3 +1,7 @@
-<div *ngFor="let index of questionIndexes">
-    <div (click)="onClick(index)">{{index}}</div>
-</div>
+<nav>
+    <ul class="pagination pagination-lg justify-content-center">
+        <li class="page-item" *ngFor="let index of questionIndexes">
+            <a class="page-link" (click)="onClick(index)">{{index}}</a>
+        </li>
+    </ul>
+</nav>
