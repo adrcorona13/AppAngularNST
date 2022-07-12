@@ -6,16 +6,13 @@
         00:00
     </div>
     <div style="border:solid 10px  blue">
-        Pregunta
-    </div>
-    <div style="border:solid 10px  orange">
-        Respuestas
+        <question [question]="getQuestion()"></question>
     </div>
     <div style="border:solid 10px  black">
-        boton izquierdo
+        <input type="button" (click)="previousQuestion()" value="Anterior"  *ngIf="currentQuestion > 0" >
     </div>
     <div style="border:solid 10px  black">
-        boton derecho
+        <input type="button" (click)="nextQuestion()" value="Siguiente" *ngIf="currentQuestion + 1 < questions.length">
     </div>
     <div style="border:solid 10px  maroon">
         progress bar

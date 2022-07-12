@@ -1,134 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Question } from './Models/Question';
+import * as data from 'src/app/questions.json';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'AppAngularNST';
+export class AppComponent implements OnInit {
 
-  questions: Question[] = [
-    {
-      index: 1,
-      text: 'Question 1',
-      answers: [
-        {
-          index: 1,
-          text: 'Answer 1',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 2,
-          text: 'Answer 2',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 3,
-          text: 'Answer 3',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 4,
-          text: 'Answer 4',
-          isChecked: false,
-          isCorrect: false
-        },
-      ]
-    },
-    {
-      index: 2,
-      text: 'Question 2',
-      answers: [
-        {
-          index: 1,
-          text: 'Answer 1',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 2,
-          text: 'Answer 2',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 3,
-          text: 'Answer 3',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 4,
-          text: 'Answer 4',
-          isChecked: false,
-          isCorrect: false
-        },
-      ]
-    },
-    {
-      index: 3,
-      text: 'Question 3',
-      answers: [
-        {
-          index: 1,
-          text: 'Answer 1',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 2,
-          text: 'Answer 2',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 3,
-          text: 'Answer 3',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 4,
-          text: 'Answer 4',
-          isChecked: false,
-          isCorrect: false
-        },
-      ]
-    },
-    {
-      index: 4,
-      text: 'Question 4',
-      answers: [
-        {
-          index: 1,
-          text: 'Answer 1',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 2,
-          text: 'Answer 2',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 3,
-          text: 'Answer 3',
-          isChecked: false,
-          isCorrect: false
-        },
-        {
-          index: 4,
-          text: 'Answer 4',
-          isChecked: false,
-          isCorrect: false
-        },
-      ]
-    },
-  ]
+  ngOnInit(): void {
+    console.log(this.questions);
+    console.log(this.questions[0]);
+  }
+  
+  title = 'AppAngularNST';
+  currentQuestion: number = 0;
+
+  questions: Question[] = (data as Question[]);
+
+  getQuestion(): Question{
+    return this.questions[this.currentQuestion];
+  }
+
+  nextQuestion(){
+    if (this.currentQuestion + 1 < this.questions.length)
+      this.currentQuestion += 1;
+  }
+
+  previousQuestion(){
+    console.log(this.currentQuestion)
+    if (this.currentQuestion > 0)
+    this.currentQuestion -= 1;
+  }
 }
