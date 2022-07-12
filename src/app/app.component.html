@@ -1,4 +1,4 @@
-<div style="border:solid 10px lightseagreen">
+<div style="border:solid 10px lightseagreen" *ngIf="!gameOver">
     <div style="border:solid 10px  green">
         Quiz
     </div>
@@ -14,11 +14,14 @@
     <div style="border:solid 10px  black">
         <input type="button" (click)="nextQuestion()" value="Siguiente" *ngIf="!isLastQuestion()">
     </div>
+    <div style="border:solid 10px  black">
+        <input type="button" (click)="displayResults()" value="Ver Resultados" *ngIf="isLastQuestion()">
+    </div>
     <div style="border:solid 10px  maroon">
         <step-bar [questionIndexes]="getQuestionIndexes()" [(currentQuestion)]="currentQuestion"></step-bar>
     </div>
 </div>
-<div style="border:solid 10px  violet">
+<div style="border:solid 10px  violet" *ngIf="gameOver">
     puntuaciones
 </div>
 <div style="border:solid 10px  purple" *ngIf="newGame">

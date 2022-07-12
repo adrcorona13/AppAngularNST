@@ -50,11 +50,19 @@ export class AppComponent implements OnInit  {
   startGame(){
     this.startTimer = true;
     this.newGame = false;
+    this.gameOver = false;
   }
 
   finishGame(){
     this.startTimer = false;
     this.newGame = true;
+    this.gameOver = true;
+  }
+
+  displayResults(){
+    this.gameOver = true;
+    this.newGame = false;
+    this.startTimer = false;
   }
 
   
