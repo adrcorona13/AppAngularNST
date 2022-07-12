@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   
   title = 'AppAngularNST';
   currentQuestion: number = 0;
+  gameStarted: boolean = false;
 
   questions: Question[] = (data as Question[]);
 
