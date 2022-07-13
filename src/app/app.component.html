@@ -1,6 +1,6 @@
 <div class="center mt-5">
 
-    <div class="center" style="border:solid 10px lightseagreen; background-color: black; color:wheat" *ngIf="!gameOver">
+    <div class="center game-container" *ngIf="!gameOver">
 
         <div class="image-container" *ngIf="!newGame">
             <img src="../assets/logo.png">
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-<div *ngIf="gameOver" class="center" style="border:solid 10px lightseagreen; background-color: black; color:wheat">
+<div *ngIf="gameOver" class="center game-container">
     <app-summary  [questions]="questions"></app-summary>
 </div>
     

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-md-12 text-center">
         <div class="btn-group btn-matrix">
-            <button type="button" [ngClass]="['btn', 'btn-' + buttonColors[indexOfelement]]"
+            <button type="button" [ngClass]="['btn', answer.isChecked?'btn-info': 'btn-' + buttonColors[indexOfelement]]"
                 *ngFor="let answer of answers; let indexOfelement=index;" (click)="selectOption(answer)">
                 {{answer.text}}</button>
         </div>
