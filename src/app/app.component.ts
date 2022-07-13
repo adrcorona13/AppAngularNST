@@ -13,7 +13,7 @@ export class AppComponent implements OnInit  {
     this.questions
   }
   
-  title = 'AppAngularNST';
+  quiz_title = "MCU Quiz"
   currentQuestionIndex: number = 1;
   
   newGame: boolean = true;

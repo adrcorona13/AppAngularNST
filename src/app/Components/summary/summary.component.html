@@ -1,25 +1,29 @@
-<table>
-    <tr>
-        <th>
+
+<table class="table table-dark" style="border:solid 10px lightseagreen; background-color: black; color:wheat">
+    <thead>
+        <tr>
+        <th class="text-center">
             Pregunta
         </th>
-        <th>
+        <th class="text-center">
             Tu respuesta
         </th>
-        <th>
+        <th class="text-center">
             Respuesta correcta
         </th>
     </tr>
-   
+    </thead>
+   <tbody>
     <tr *ngFor="let question of questions" [ngStyle]="{'background-color': (isCorrect(question.answers))?'Green':'Red'}">
-        <td>
-            {{question.text}} {{isCorrect(question.answers)}}
+        <td class="text-center">
+            {{question.text}}
         </td>
-        <td>
+        <td class="text-center">
             {{getAnswer(question.answers, true)}}
         </td>
-        <td>
+        <td class="text-center">
             {{getAnswer(question.answers, false)}}
         </td>
     </tr>
+</tbody>
 </table>

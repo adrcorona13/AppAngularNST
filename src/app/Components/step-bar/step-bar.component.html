@@ -1,5 +1,5 @@
-<nav>
-    <ul class="pagination pagination-lg justify-content-center">
+<nav class="d-flex justify-content-center" style="margin-top: 15px;">
+    <ul class="pagination pagination-lg ">
         <li class="page-item" *ngFor="let index of questionIndexes">
             <a class="page-link" (click)="onClick(index)">{{index}}</a>
         </li>

@@ -9,6 +9,7 @@ import { TimerComponent } from './Components/timer/timer.component';
 import { StepBarComponent } from './Components/step-bar/step-bar.component';
 import { AnswerComponent } from './Components/answer/answer.component';
 import { SummaryComponent } from './Components/summary/summary.component';
+import { MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SummaryComponent } from './Components/summary/summary.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

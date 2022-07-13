@@ -3,7 +3,7 @@ import { Answer } from 'src/app/Models/Answer';
 import { Question } from 'src/app/Models/Question';
 
 @Component({
-  selector: 'summary',
+  selector: 'app-summary',
   templateUrl: './summary.component.html',
   styleUrls: ['./summary.component.css']
 })
