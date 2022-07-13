@@ -1,0 +1,32 @@
+/* Arrange buttons */
+.btn-matrix {
+    flex-wrap: wrap; /* allow buttons to jump to another row */
+ }
+ .btn-matrix > .btn {
+    width: 50%; /* force buttons to have the same width regardless of content */
+ }
+
+ /* Fix border radius */
+ .btn-matrix > .btn:first-child {
+    border-bottom-left-radius: 0;
+    border-bottom: 0px;
+    border-right: 0px;
+ }
+ .btn-matrix > .btn:nth-child(2) {
+    border-top-right-radius: 4px !important;
+    border-bottom: 0px;
+ }
+ .btn-matrix > .btn:nth-last-child(2) {
+    border-bottom-left-radius: 4px !important;
+    border-right: 0px;
+    margin-left: 0px!important;
+ }
+ .btn-matrix > .btn:last-child {
+    border-top-right-radius: 0;
+ }
+ 
+ /* Decorations */
+ .btn-matrix {
+    margin: 20px;
+    max-width: 500px;
+ }

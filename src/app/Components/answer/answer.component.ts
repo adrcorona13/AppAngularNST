@@ -11,6 +11,13 @@ export class AnswerComponent implements OnInit {
   @Input()
   answers: Answer[] = [];
 
+  buttonColors = [
+    'primary',
+    'warning',
+    'success',
+    'danger',
+  ]
+
   @Output()
   answersChange = new EventEmitter<Answer[]>();
 
@@ -20,6 +27,7 @@ export class AnswerComponent implements OnInit {
   }
 
   selectOption(option: Answer){
+    console.log("entro")
     this.answers.map(x=> {
       if(x.index === option.index){
         x.isChecked = true;
