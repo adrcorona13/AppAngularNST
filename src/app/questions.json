@@ -2,6 +2,7 @@
     {
       "index": 1,
       "text": "Question 1",
+      "imageUrl": "../assets/logo.png",
       "answers": [
         {
           "index": 1,

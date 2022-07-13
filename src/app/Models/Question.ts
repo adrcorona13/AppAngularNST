@@ -4,5 +4,6 @@ export interface Question{
     index: number,
     text: string,
     answers: Answer[],
-    isSelected: boolean
+    isSelected: boolean,
+    imageUrl: string
 }
