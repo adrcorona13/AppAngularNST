@@ -1,10 +1,13 @@
 <div class="center mt-5">
+
     <div class="center" style="border:solid 10px lightseagreen; background-color: black; color:wheat" *ngIf="!gameOver">
 
-        <h1 class="text-center mt-5">{{quiz_title}}</h1>
-
+        <div class="image-container" *ngIf="!newGame">
+            <img src="../assets/logo.png">
+        </div>
         <div *ngIf="newGame" class="mt-5">
-            <timer *ngIf="startTimer" [timeLeft]="5" (timerEnds)="displayResults()"></timer>
+            <h1 class="text-center mt-5">{{quiz_title}}</h1>
+            <timer *ngIf="startTimer" [timeLeft]="60" (timerEnds)="displayResults()"></timer>
 
             <div class="row">
                 <div class="col-lg-1 d-flex justify-content-center align-items-center">
