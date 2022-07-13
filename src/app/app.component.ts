@@ -62,10 +62,6 @@ export class AppComponent implements OnInit  {
     this.startTimer = false;
   }
 
-  printQuestions(){
-    console.log("preguntas", this.questions)
-  }
-
   resetAnswers(){
     this.questions.map(x=> x.answers.map(y=> y.isChecked = false));
   }

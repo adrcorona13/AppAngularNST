@@ -19,12 +19,10 @@ export class StepBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.questionIndexes);
+    
   }
 
   onClick(index: number){
-    console.log(index);
-    
     this.currentQuestion = index;
     this.currentQuestionChange.emit(this.currentQuestion);
   }

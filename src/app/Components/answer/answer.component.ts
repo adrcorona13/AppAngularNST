@@ -27,7 +27,6 @@ export class AnswerComponent implements OnInit {
   }
 
   selectOption(option: Answer){
-    console.log("entro")
     this.answers.map(x=> {
       if(x.index === option.index){
         x.isChecked = true;
