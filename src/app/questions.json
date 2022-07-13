@@ -1,30 +1,30 @@
 [
     {
       "index": 1,
-      "text": "Question 1",
+      "text": "¿En qué año se estrenó la primera película de Iron Man, que lanzó el Marvel Cinematic Universe?",
       "imageUrl": "../assets/logo.png",
       "answers": [
         {
           "index": 1,
-          "text": "Answer 1",
+          "text": "2005",
           "isChecked": false,
           "isCorrect": false
         },
         {
           "index": 2,
-          "text": "Answer 2",
+          "text": "2008",
           "isChecked": false,
           "isCorrect": true
         },
         {
           "index": 3,
-          "text": "Answer 3",
+          "text": "2010",
           "isChecked": false,
           "isCorrect": false
         },
         {
           "index": 4,
-          "text": "Answer 4",
+          "text": "2012",
           "isChecked": false,
           "isCorrect": false
         }
@@ -32,29 +32,30 @@
     },
     {
       "index": 2,
-      "text": "Question 2",
+      "text": "Cómo se llama el martillo de Thor?",
+      "imageUrl": "../assets/martillo.png",
       "answers": [
         {
           "index": 1,
-          "text": "Answer 1",
-          "isChecked": false,
-          "isCorrect": true
-        },
-        {
-          "index": 2,
-          "text": "Answer 2",
+          "text": "Vanir",
           "isChecked": false,
           "isCorrect": false
         },
         {
+          "index": 2,
+          "text": "Mjolnir",
+          "isChecked": false,
+          "isCorrect": true
+        },
+        {
           "index": 3,
-          "text": "Answer 3",
+          "text": "Aesir",
           "isChecked": false,
           "isCorrect": false
         },
         {
           "index": 4,
-          "text": "Answer 4",
+          "text": "Jonathan",
           "isChecked": false,
           "isCorrect": false
         }
@@ -62,29 +63,30 @@
     },
     {
       "index": 3,
-      "text": "Question 3",
+      "text": " ¿De qué está hecho el escudo del Capitán América?",
+      "imageUrl": "../assets/escudo.png",
       "answers": [
         {
           "index": 1,
-          "text": "Answer 1",
+          "text": "Adamantium",
           "isChecked": false,
           "isCorrect": false
         },
         {
           "index": 2,
-          "text": "Answer 2",
-          "isChecked": false,
-          "isCorrect": false
-        },
-        {
-          "index": 3,
-          "text": "Answer 3",
+          "text": "Vibranio",
           "isChecked": false,
           "isCorrect": true
         },
         {
+          "index": 3,
+          "text": "Carbonadio",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
           "index": 4,
-          "text": "Answer 4",
+          "text": "Aluminium",
           "isChecked": false,
           "isCorrect": false
         }
@@ -92,29 +94,154 @@
     },
     {
       "index": 4,
-      "text": "Question 4",
+      "text": "¿Qué canción baila Baby Groot al final de Guardians of the Galaxy Vol. 1?",
+      "imageUrl": "../assets/baby_groot.png",
       "answers": [
         {
           "index": 1,
-          "text": "Answer 1",
+          "text": "La chona",
           "isChecked": false,
           "isCorrect": false
         },
         {
           "index": 2,
-          "text": "Answer 2",
+          "text": "Cherry Bomb",
           "isChecked": false,
           "isCorrect": false
         },
         {
           "index": 3,
-          "text": "Answer 3",
+          "text": "El payaso del rodeo",
           "isChecked": false,
           "isCorrect": false
         },
         {
           "index": 4,
-          "text": "Answer 4",
+          "text": "I want you back",
+          "isChecked": false,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "text": "¿En qué película sale la escena post-créditos donde vemos a Thanos por primera vez?",
+      "imageUrl": "../assets/thanos.png",
+      "answers": [
+        {
+          "index": 1,
+          "text": "Avengers",
+          "isChecked": false,
+          "isCorrect": true
+        },
+        {
+          "index": 2,
+          "text": "Capitan América: El primer vengador",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 3,
+          "text": "IronMan 2",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 4,
+          "text": "Ant Man",
+          "isChecked": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "text": "¿En qué película aparece Spiderman por primera vez?",
+      "imageUrl": "../assets/spiderman.png",
+      "answers": [
+        {
+          "index": 1,
+          "text": "Spiderman: Homecoming",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 2,
+          "text": "Avengers: La era de ultrón",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 3,
+          "text": "Doctor Strange",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 4,
+          "text": "Capitan América: Civil War",
+          "isChecked": false,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "text": " ¿En qué planeta recupera Peter Quill el Orbe que contiene la Piedra de Poder?",
+      "imageUrl": "../assets/orbe.png",
+      "answers": [
+        {
+          "index": 1,
+          "text": "Knowhere",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 2,
+          "text": "Ego",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 3,
+          "text": "Volmir",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 4,
+          "text": "Morag",
+          "isChecked": false,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "text": "¿Lugar de fabricación del Guantelete del Infinito",
+      "imageUrl": "../assets/guante.png",
+      "answers": [
+        {
+          "index": 1,
+          "text": "Nidavellir",
+          "isChecked": false,
+          "isCorrect": true
+        },
+        {
+          "index": 2,
+          "text": "La forja de Odín",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 3,
+          "text": "Dark World",
+          "isChecked": false,
+          "isCorrect": false
+        },
+        {
+          "index": 4,
+          "text": "China",
           "isChecked": false,
           "isCorrect": true
         }
