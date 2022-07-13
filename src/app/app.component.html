@@ -1,37 +1,47 @@
-<div class="container">
-    <div style="border:solid 10px lightseagreen; background-color: black; color:wheat" *ngIf="!gameOver">
+<div class="center mt-5">
+    <div class="center" style="border:solid 10px lightseagreen; background-color: black; color:wheat" *ngIf="!gameOver">
 
-        <h1 style="margin-top: 10px;" class="text-center">{{quiz_title}}</h1>
+        <h1 class="text-center mt-5">{{quiz_title}}</h1>
 
-        <timer *ngIf="startTimer" [timeLeft]="60" (timerEnds)="gameOver = true"></timer>
+        <div *ngIf="newGame" class="mt-5">
+            <timer *ngIf="startTimer" [timeLeft]="60" (timerEnds)="gameOver = true"></timer>
 
-        <div class="row">
-            <div class="col-lg-1 d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-primary" (click)="previousQuestion()" *ngIf="isFirstQuestion()">
-                    <mat-icon>skip_previous</mat-icon>
-                </button>
+            <div class="row">
+                <div class="col-lg-1 d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-outline-primary" (click)="previousQuestion()"
+                        *ngIf="isFirstQuestion()">
+                        <mat-icon>skip_previous</mat-icon>
+                    </button>
+                </div>
+                <div class="col-lg-10">
+                    <question [question]="getQuestion()"></question>
+                </div>
+                <div class="col-lg-1 d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-outline-primary" (click)="nextQuestion()"
+                        *ngIf="!isLastQuestion()">
+                        <mat-icon>skip_next</mat-icon>
+                    </button>
+                </div>
             </div>
-            <div class="col-lg-10">
-                <question [question]="getQuestion()"></question>
-            </div>
-            <div class="col-lg-1 d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-primary" (click)="nextQuestion()" *ngIf="!isLastQuestion()">
-                    <mat-icon>skip_next</mat-icon>
-                </button>
-            </div>
+
+            <step-bar [questionIndexes]="getQuestionIndexes()" [(currentQuestion)]="currentQuestionIndex"></step-bar>
         </div>
-
-        <step-bar [questionIndexes]="getQuestionIndexes()" [(currentQuestion)]="currentQuestionIndex"></step-bar>
     </div>
 
+<div *ngIf="gameOver" class="center" style="border:solid 10px lightseagreen; background-color: black; color:wheat">
+    <app-summary  [questions]="questions"></app-summary>
+</div>
+    
 
-    <app-summary *ngIf="gameOver" [questions]="questions"></app-summary>
 
-
-    <div class="text-center">
-        <input *ngIf="newGame" type="button" value="Iniciar juego" (click)="startGame()">
-        <input *ngIf="!newGame" type="button" value="Terminar juego" (click)="finishGame()">
-        <input type="button" (click)="displayResults()" value="Ver Resultados" *ngIf="isLastQuestion()">
+    <div class="text-center mt-5">
+        <button type="button" class="btn btn-outline-info" *ngIf="!newGame" (click)="startGame()">
+            Nueva Partida!
+        </button>
+        <button type="button" class="btn btn-outline-info" *ngIf="isLastQuestion() && !this.gameOver "
+            (click)="displayResults()">
+            Ver los resultados!
+        </button>
     </div>
 
 </div>

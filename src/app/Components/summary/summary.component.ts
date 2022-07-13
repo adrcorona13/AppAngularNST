@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Answer } from 'src/app/Models/Answer';
 import { Question } from 'src/app/Models/Question';
 
@@ -11,6 +11,8 @@ export class SummaryComponent implements OnInit {
 
   @Input()
   questions: Question[] = [];
+
+  counter: number = 0;
 
   constructor() { }
 
@@ -30,4 +32,5 @@ export class SummaryComponent implements OnInit {
     return answers.find(x=> x.isChecked)?.index 
             == answers.find(x=> x.isCorrect)?.index;
   }
+  
 }

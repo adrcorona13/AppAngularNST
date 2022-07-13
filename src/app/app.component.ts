@@ -16,7 +16,7 @@ export class AppComponent implements OnInit  {
   quiz_title = "MCU Quiz"
   currentQuestionIndex: number = 1;
   
-  newGame: boolean = true;
+  newGame: boolean = false;
   gameOver: boolean = false;
   startTimer: boolean = false;
 
@@ -50,14 +50,10 @@ export class AppComponent implements OnInit  {
 
   startGame(){
     this.startTimer = true;
-    this.newGame = false;
-    this.gameOver = false;
-  }
-
-  finishGame(){
-    this.startTimer = false;
     this.newGame = true;
-    this.gameOver = true;
+    this.gameOver = false;
+    this.currentQuestionIndex = 1;
+    this.resetAnswers();
   }
 
   displayResults(){
@@ -68,6 +64,10 @@ export class AppComponent implements OnInit  {
 
   printQuestions(){
     console.log("preguntas", this.questions)
+  }
+
+  resetAnswers(){
+    this.questions.map(x=> x.answers.map(y=> y.isChecked = false));
   }
   
 }
